@@ -14,6 +14,13 @@ h1{
     font-size: 3.5rem;
     line-height: 1.5;
 }
+h3{
+    font-size: 1.5rem;
+    font-family: "Monserrat-Bold";
+}
+p{
+    color: #686868;
+}
 .container-fluid{
     padding:  15%;
 }
@@ -48,4 +55,11 @@ h1{
     padding-bottom: 14%;
     width: 60%;
     transform: rotate(25deg)
+}
+/* Features section */
+#features{
+    padding: 7% 15%;
+}
+.features-box{
+    text-align: center;
 }
