@@ -37,7 +37,13 @@ class Snake:
         self.add_segements(self.segments[-1].position())
 
 
-
+    def reset(self):
+        #Make the snake disappear into nowhere :)
+        for seg in self.segements:
+            seg.goto(1000,1000) 
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
 
     #Using the keys to move the snake
     def up(self):

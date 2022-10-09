@@ -36,14 +36,16 @@ while game_is_on:
 
 #detech collision with wall
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
 
 #detech collision with tail
 #Skips the first head so it don't show game over using the slicing method
-    for segent in snake.segments[1:]:
-        if snake.head.distance(segent) < 10:
-            game_is_on = False
-            scoreboard.game_over()
+    for segent in snake.segments:
+        if segent == snake.head:
+            pass
+        elif snake.head.distance(segent) < 10:
+            scoreboard.reset()
+            snake.reset()
 
 screen.exitonclick()
