@@ -22,7 +22,7 @@ app.get("/", function( request,response ){
 //__dirname useful to know the directory when deploying the website
  response.sendFile(__dirname +"/index/index.html");
 });
-
+//whenever user try to access our server we will do the following
 app.post("/", function(req, res){
    
     var num1 = Number(req.body.num1);
